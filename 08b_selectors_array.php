@@ -10,7 +10,7 @@
 			$('#btn_boxes').click(function() {
 				$('.box').each(function() {
 					$(this).animate({
-						height:'toggle',
+						height: 'toggle'
 					});
 				});
 			});
