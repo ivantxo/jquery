@@ -8,11 +8,17 @@
 	<script>
 		$(document).ready(function () {
 			$('#btn_ican').click(function() {
-				$('li:eq(2)').css('background-color', '#EEEEEE');
+				//$('li:eq(2)').css('background-color', '#EEEEEE');
+				
+				// Another way to get the third element of a list
+				$('li:nth-child(3)').css('background-color', '#EEEEEE');
 			});
 
 			$('#btn_clear').click(function() {
-				$('li:eq(2)').css('background-color', '#EEEE54');
+				//$('li:eq(2)').css('background-color', '#EEEE54');
+				
+				// Another way to get the third element of a list
+				$('li:nth-child(3)').css('background-color', '#EEEE54');
 			});
 		});
 	</script>
