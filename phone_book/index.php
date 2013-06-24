@@ -23,11 +23,19 @@
 			var search_val = $('#search_term').val();
 			if (search_val.length > 0) {
 				search_val = search_val.toLowerCase();
-				$.post('./find.php', { search_term : search_val}, function(data) {
-					if (data.length > 0) {
-						$('#search_results').html(data);
+				$.post(
+					'./find.php', 
+					{ 
+						search_term : search_val
+					}, 
+					function(data) {
+						if (data.length > 0) {
+							$('#search_results').html(data);
+						}
 					}
-				});
+				);
+			} else {
+				$('#search_results').hide();
 			}
 		}
 	</script>
@@ -40,7 +48,7 @@
 	<h1>Search on MyPhoneBook</h1> 
 	<form id="searchform" method="post"> 
 		<div> 
-			<label for="search_term">Search Name/Phone</label>
+			<label for="search_term">Name/Phone</label>
 			<input type="text" name="search_term" id="search_term" />
 			<input type="submit" value="search" id="search_button" /> 
 		</div> 
